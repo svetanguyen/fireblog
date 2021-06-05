@@ -14,6 +14,14 @@
           </div>
       </nav>
       <menuIcon />
+      <transition name="mobile-nav">
+        <ul>
+            <router-links class="link" to="#">Home</router-links>
+            <router-links class="link" to="#">Blogs</router-links>
+            <router-links class="link" to="#">Create Post</router-links>
+            <router-links class="link" to="#">Login/Register</router-links>
+        </ul>
+      </transition>
   </header>
 </template>
 
