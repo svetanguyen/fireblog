@@ -31,6 +31,13 @@ export default {
     name: 'navigation',
     components: {
         menuIcon
+    },
+    data() {
+        return {
+            mobile: null,
+            mobileNav: null,
+            windowWidth: null
+        }
     }
 }
 </script>
