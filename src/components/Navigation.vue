@@ -15,7 +15,7 @@
       </nav>
       <menuIcon class="menu-icon" />
       <transition name="mobile-nav">
-        <ul>
+        <ul class="mobile-nav">
              <router-link class="link" to="#">Home</router-link>
             <router-link class="link" to="#">Blogs</router-link>
             <router-link class="link" to="#">Create Post</router-link>
@@ -83,6 +83,32 @@ export default {
                     }
                 }
             }
+        }
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        position: absolute;
+        top: 32px; 
+        right: 25px;
+        height: 25px;
+        width: auto;
+    }
+
+    .mobile-nav {
+        padding: 20px;
+        width: 70%;
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        background: #303030;
+        top: 0;
+        left: 0;        
+        .link {
+            padding: 15px 0;
+            color: #fff;
         }
     }
 </style>
