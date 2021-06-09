@@ -39,6 +39,10 @@ export default {
             windowWidth: null
         };        
     },
+    created() {
+        window.addEventListener('resize', this.checkScreen);
+        this.checkScreen();
+    },
     methods: {
         checkScreen() {
             this.windowWidth = window.innerWidth;
@@ -50,6 +54,10 @@ export default {
                 this.mobileNav = false;
                 return
             }
+        },
+
+        toggleMobileNav() {
+            this.mobileNav = !this.mobileNav;
         }
     }
 }
