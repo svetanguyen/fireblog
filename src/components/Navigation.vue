@@ -37,6 +37,19 @@ export default {
             mobile: null,
             mobileNav: null,
             windowWidth: null
+        };        
+    },
+    methods: {
+        checkScreen() {
+            this.windowWidth = window.innerWidth;
+            if (this.windowWidth <= 750) {
+                this.mobile = true;
+                return
+            } else {
+                this.mobile = false;
+                this.mobileNav = false;
+                return
+            }
         }
     }
 }
