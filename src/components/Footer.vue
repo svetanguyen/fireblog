@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 footer {
   margin-top: auto;
   padding: 100px 25px;
