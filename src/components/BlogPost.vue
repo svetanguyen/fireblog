@@ -13,11 +13,12 @@
                   View the post <Arrow class="arrow" /> 
               </router-link>
           </div>
-          <div class="blog-photo">
+          
+      </div>
+      <div class="blog-photo">
               <img v-if="post.welcomeScreen"  :src="require(`../assets/blogPhotos/${post.photo}.jpg`)" alt="">
               <img v-else src="require(`../assets/blogPhotos/${post.blogCoverPhoto}.jpg`)" alt="">
           </div>
-      </div>
   </div>
 </template>
 
@@ -33,5 +34,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .blog-wrapper {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+        @media (min-width: 700px) {
+            min-height: 650px;
+            max-height: 650px;
+            flex-direction: row;
+        }
+        .blog-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 4;
+            order: 2;
+            @media(min-width:700px) {
+                order: 1;
+            }
+            @media(min-width:800px) {
+                flex: 3;
+            }
+            div {
+                max-width: 375px;
+            }
+        }
+    }
 
 </style>
