@@ -2,10 +2,10 @@
   <div class="blog-card">
     <div class="icons">
       <div class="icon">
-        <Edit class="icon" />
+        <Edit class="edit" />
       </div>
       <div class="icon">
-        <Delete class="icon" />
+        <Delete class="delete" />
       </div>
     </div>
     <img :src="require(`../assets/blogCards/${post.blogCoverPhoto}.jpg`)" alt="">
@@ -34,6 +34,58 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  .blog-card {
+    position:  relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background: #fff;
+    min-height: 420px;
+    transition: .5s ease all;
+    &:hover {
+      transform: rotateZ(-1deg) scale(1.01);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+    }
 
+  }
+
+  .icons {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: #fff;
+      transition: .5s ease all;
+      &:hover {
+        background: #303030;
+        .edit,
+        .delete {
+          path {
+            fill: #fff;
+          }
+        }
+              
+      }
+      &:nth-child(1) {
+        margin-right: 8px;
+      }  
+      .edit,
+      .delete {
+       pointer-events: none;
+       height: 15px;
+       width: auto;
+      }
+    }
+  }
 </style>
