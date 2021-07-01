@@ -6,7 +6,7 @@
       <div class="container">
         <h3>View more recent blogs</h3>
         <div class="blog-cards">
-          <BlogCards :post="post" v-for="(post, index) in sampleBlogCards" :key="index" />
+          <BlogCard :post="post" v-for="(post, index) in sampleBlogCards" :key="index" />
         </div>
       </div>
     </div>
@@ -24,10 +24,10 @@
 <script>
 import Arrow from '../assets/Icons/arrow-right-light.svg'
 import BlogPost from '../components/BlogPost.vue'; 
-import BlogCards from '../components/BlogCard.vue';
+import BlogCard from '../components/BlogCard.vue';
 export default {
   name: "Home",
-  components: {BlogPost,BlogCards, Arrow},
+  components: {BlogPost,BlogCard, Arrow},
   data() {
     return {
       welcomeScreen: {
