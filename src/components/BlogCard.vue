@@ -35,6 +35,9 @@ export default {
     editPost() {
       return this.$store.state.editPost;
     }
+  },
+  beforeDestroy() {
+    this.$store.commit("toggleEditPost", false)
   }
 }
 </script>
